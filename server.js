@@ -7,6 +7,9 @@ const port = 1000;  // using this port variable to declare a port for our server
 //using the "http" library to create a server
 
 const server = http.createServer((req,res) => { //used arrow function in the createServer method in http library
+  
+    res.write('Hello there welcome to my server'); //creating custom response
+    res.end()
 
 })
 
