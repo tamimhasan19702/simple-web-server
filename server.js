@@ -5,7 +5,7 @@ const port = 1000;  // using this port variable to declare a port for our server
 //using the "http" library to create a server
 const server = http.createServer((req,res) => { //used arrow function in the createServer method in http library   
     res.writeHead(200, {'Content-type': 'text/html'})
-    fs.readdir('/directory',function(error,data){
+    fs.readFile('index.html',function(error,data){
         if(error){
             res.writeHead(404)
             res.write(`Error: there is no file available. ${error}`)
